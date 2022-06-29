@@ -12,6 +12,7 @@ body {
    justify-content: space-between;
    background: #FF0000;
    box-shadow: 0 10px 8px #060606;
+   position: relative;
 }
 .navbar__menu{
       display: flex;
@@ -176,22 +177,85 @@ body {
    .side__logo img{
       max-width: 222.3px; 
    }
-  
 }
 @media  screen and (max-width: 823px) {
-   .carousel__item img{
-      max-width: 340px;
+
+   #nav__logo img{
+      width: 4.5em;
+   }
+   .navbar a{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: larger;
+}
+.navbar__menu{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, 100px);
+      position: absolute;
+      width: 100vw;
+      top: -1000px;
+}  
+.navbar__menu.active{
+   top: 100%;
+   opacity: 1;
+   height: 100vh;
+   z-index: 99;
+   background: #FF0000;
+  }
+.nav__toggle .bar{
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      transition: all 0.3s ease-in-out;
+      background: #000;
+      display: block;
+      cursor: pointer;
+    }
+   #mobile__menu{
+      position: absolute;
+      top: 15%;
+      right: 5%;
+      transform: translate(5%, 20%);
+   }
+   #mobile__menu.is-active .bar:nth-child(2){
+      opacity: 0;
+   }
+   #mobile__menu.is-active .bar:nth-child(1){
+      transform: translateY(8px) rotate(45deg);
+   }
+   #mobile__menu.is-active .bar:nth-child(3){
+      transform: translateY(-8px) rotate(-45deg);
    }
    .side__logo img{
       display: none;
    }
-   .navbar__menu a {
-      font-size: 1em;
+   .hero img{
+      height: 85vh;
+   }
+   .header__wrapper{
+      height: 90vh;
+   }
+   .photo__column img{
+      padding: 0;
+   }  
+.contact__us a{
+      font-size: 1.2vh;
+   } 
+.contact__us h2{
+   font-size: 1.9vh;
+    }
+.ftr__btm{
+   font-size: 1vh;
+   margin-top: 10px ;
+   }
+.btm__social__link img{
+   width: 1.9em;
    }
 }
-@media  screen and (max-width: 480px) {
-   .carousel__item img{
-      max-width: 240px;
-   }
-
+@media  screen and (max-width: 412px){
+.carousel__item img{
+   max-width: 240px;
+}
 }
