@@ -51,11 +51,20 @@ body {
    width: 100%;
    padding-right: 2rem;
 }
-.video__sec{
+.video__container{
+   background-color: #000;
+}
+.video__sec-one{
    position: relative;
    padding-bottom: 56.25%;
-   margin: 40px;
+   margin: 0 50px 25px;
 }
+.video__sec-two{
+   position: relative;
+   padding-bottom: 56.25%;
+   margin: 25px 50px;
+}
+
 .video{
    position: absolute;
    top: 0;
